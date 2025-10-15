@@ -1,13 +1,7 @@
-import { prisma } from "@/lib/db"
-
-
-export default async function Home() {
-  const users = await prisma.user.findMany();
+export default function Home() {
   return(
     <div>
-      <h1>HI</h1>
-      <pre>{JSON.stringify(users)}</pre>
+      HI
     </div>
   )
-  
 }

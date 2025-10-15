@@ -6,7 +6,7 @@ import { Moon, Sun } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function Header() {
-  const { theme, toggleTheme, mounted } = useWebContext()
+  const { theme, toggleTheme, mounted} = useWebContext()
 
   if (!mounted) {
     return (
@@ -17,6 +17,7 @@ export default function Header() {
           disabled
           className="w-10 h-10 rounded-full bg-muted animate-pulse"
         />
+        
       </header>
     )
   }
@@ -52,5 +53,6 @@ export default function Header() {
         </AnimatePresence>
       </Toggle>
     </header>
+
   )
 }

@@ -9,7 +9,9 @@ export const WebProvider = ({ children }) => {
   const { theme, resolvedTheme, setTheme, systemTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
     const current = resolvedTheme || theme || systemTheme || "light";
