@@ -10,7 +10,7 @@ export default function Header() {
 
   if (!mounted) {
     return (
-      <header className="flex items-center justify-between p-4 border-b border-border">
+      <header className="flex items-center justify-between p-2 border-b border-border">
         <h1 className="text-lg font-semibold tracking-tight">NEXTJS APP</h1>
         <button
           aria-busy="true"
@@ -24,13 +24,14 @@ export default function Header() {
   const isDark = theme === "dark"
 
   return (
-    <header className="flex items-center justify-between p-4 border-b border-border backdrop-blur-lg">
+    <header className="flex items-center justify-between p-2 border-b border-border backdrop-blur-lg">
       <h1 className="text-lg font-semibold tracking-tight">NEXTJS APP</h1>
 
       <Toggle
+        title="Toogle light and dark modes"
         onClick={toggleTheme}
         aria-pressed={isDark}
-        className="relative cursor-pointer flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 
+        className="relative cursor-pointer flex h-6 w-6 items-center justify-center rounded-full transition-all duration-300 
                    bg-muted hover:bg-accent border border-border shadow-sm group"
       >
         <AnimatePresence mode="wait" initial={false}>
